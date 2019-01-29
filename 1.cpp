@@ -1,7 +1,6 @@
 #include<iostream>
 #include<cmath>
-using namespace std;
-void main()
+void p1()
 {cout<<"Please input a b c"<<endl;
 int a,b,c,d,s;
 cin>>a>>b>>c;

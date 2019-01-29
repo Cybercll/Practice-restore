@@ -1,0 +1,4 @@
+﻿  2.cpp
+c:\users\cl\desktop\练习git\practice\2.cpp(4): error C2065: “endl”: 未声明的标识符
+c:\users\cl\desktop\练习git\practice\2.cpp(5): error C2562: “p1”:“void”函数返回值
+  c:\users\cl\desktop\练习git\practice\2.cpp(2): note: 参见“p1”的声明
