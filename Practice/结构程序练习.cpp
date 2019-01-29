@@ -1,7 +1,7 @@
 #include<iostream> ///随机产生两个整数，输入其和，判断输入是否正确。
 #include<ctime>
 using namespace std;
-void main()
+void p5()
 {
 	int a, b, c, d = 0;
 	srand((unsigned int)(time(NULL)));//使rand函数的随机数种子随着时间变化

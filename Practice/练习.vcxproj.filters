@@ -33,6 +33,9 @@
     <ClCompile Include="结构程序练习.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="四则运算计算器.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="project1\StdAfx.h">
