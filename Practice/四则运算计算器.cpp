@@ -1,7 +1,7 @@
 #include<iostream>
 #include<cmath>
 using namespace std;
-void main()
+void p6()
 {
 	float a, c = 0;
 	char b;
