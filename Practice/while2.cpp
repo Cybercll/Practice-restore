@@ -1,7 +1,7 @@
 //	输入一个整数，输出其位数，并将其按逆序输出.
 #include<iostream>
 using namespace std;
-void main()
+void p8()
 {
 	//利用while函数每次可以除10 可出位数
 	//再利用所得小数得到位数

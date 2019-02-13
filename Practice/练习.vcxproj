@@ -101,6 +101,8 @@
   <ItemGroup>
     <ClCompile Include="while2.cpp" />
     <ClCompile Include="while语句.cpp" />
+    <ClCompile Include="估计sin值 例题.cpp" />
+    <ClCompile Include="估计sin值.cpp" />
     <ClCompile Include="四则运算计算器.cpp" />
     <ClCompile Include="结构程序练习.cpp" />
     <ClCompile Include="？：语句.cpp" />
