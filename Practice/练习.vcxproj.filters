@@ -48,6 +48,9 @@
     <ClCompile Include="估计sin值 例题.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="11指针1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="project1\StdAfx.h">

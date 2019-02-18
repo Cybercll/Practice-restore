@@ -1,7 +1,7 @@
 #include <iostream>
 #include<cmath>
 using namespace std;
-void main()
+void p9()
 {
 	int i = 1;
 	double x, sx = 0, t;
