@@ -1,11 +1,11 @@
 #include <iostream>
-using namespace std;//输出一个字母的大写
+using namespace std;//脢盲鲁枚脪禄赂枚脳脰脛赂碌脛麓贸脨麓
 void p4()
 {
 	char cha, oup;
 	cout << "Input a charactar"<<endl;
 		cin >> cha;
-		oup =( cha >= 'a'&&cha <= 'z')?(cha - 32): cha;
+		oup =( cha >= 'a'&&cha <= 'z')?(cha - 32): (cha+32);
 		cout << oup << endl;
 	system("pause");
 }
