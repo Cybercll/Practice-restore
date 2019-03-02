@@ -1,7 +1,7 @@
 #include<iostream>
 #include<cmath>
 using namespace std;
-void p10()
+void main()
 {
 	float a,b,fenmu,fenzi;
 	double num,jiecheng;

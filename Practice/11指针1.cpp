@@ -1,7 +1,7 @@
 #include<iostream>
 #include<ctime>
 using namespace std;
-void main()
+void p11()
 {
 	int a, b;
 	srand(time(0));
