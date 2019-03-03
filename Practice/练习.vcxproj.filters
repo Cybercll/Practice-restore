@@ -51,6 +51,9 @@
     <ClCompile Include="11指针1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="按升序输出输入的几个值.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="project1\StdAfx.h">
