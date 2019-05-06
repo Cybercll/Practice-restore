@@ -51,7 +51,16 @@
     <ClCompile Include="11指针1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="按升序输出输入的几个值.cpp">
+    <ClCompile Include="按升序输出输入的几个值13.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="，，，语句14.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cin.getline15.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="p16.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
