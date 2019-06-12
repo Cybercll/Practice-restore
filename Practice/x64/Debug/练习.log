@@ -1,3 +1,10 @@
-﻿  p16.cpp
-  d:\桌面\练习git\Practice\p16.cpp(16) : warning C4715: “unique”: 不是所有的控件路径都返回值
-  练习.vcxproj -> d:\桌面\练习git\Practice\x64\Debug\练习.exe
+﻿  Vc大作业.cpp
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,24): warning C4838:  从“double”转换到“int”需要收缩转换
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,32): warning C4838:  从“double”转换到“int”需要收缩转换
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,40): warning C4838:  从“double”转换到“int”需要收缩转换
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,48): warning C4838:  从“double”转换到“int”需要收缩转换
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,56): warning C4838:  从“double”转换到“int”需要收缩转换
+Vc大作业.obj : error LNK2019: 无法解析的外部符号 "void __cdecl showmenu(struct student *)" (?showmenu@@YAXPEAUstudent@@@Z)，该符号在函数 main 中被引用
+    已定义且可能匹配的符号上的提示:
+      "int __cdecl showmenu(struct student *)" (?showmenu@@YAHPEAUstudent@@@Z)
+d:\桌面\练习git\Practice\x64\Debug\练习.exe : fatal error LNK1120: 1 个无法解析的外部命令

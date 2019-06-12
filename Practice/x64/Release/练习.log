@@ -1,0 +1,7 @@
+﻿  Vc大作业.cpp
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,24): warning C4838:  从“double”转换到“int”需要收缩转换
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,32): warning C4838:  从“double”转换到“int”需要收缩转换
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,40): warning C4838:  从“double”转换到“int”需要收缩转换
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,48): warning C4838:  从“double”转换到“int”需要收缩转换
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,56): warning C4838:  从“double”转换到“int”需要收缩转换
+  练习.vcxproj -> d:\桌面\练习git\Practice\x64\Release\练习.exe

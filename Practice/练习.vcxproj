@@ -102,6 +102,7 @@
     <ClCompile Include="11指针1.cpp" />
     <ClCompile Include="cin.getline15.cpp" />
     <ClCompile Include="p16.cpp" />
+    <ClCompile Include="Vc大作业.cpp" />
     <ClCompile Include="while2.cpp" />
     <ClCompile Include="while语句.cpp" />
     <ClCompile Include="估计sin值 例题.cpp" />

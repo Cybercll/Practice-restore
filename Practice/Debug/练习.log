@@ -1,4 +1,41 @@
-﻿  2.cpp
-c:\users\cl\desktop\练习git\practice\2.cpp(4): error C2065: “endl”: 未声明的标识符
-c:\users\cl\desktop\练习git\practice\2.cpp(5): error C2562: “p1”:“void”函数返回值
-  c:\users\cl\desktop\练习git\practice\2.cpp(2): note: 参见“p1”的声明
+﻿  11指针1.cpp
+  cin.getline15.cpp
+  p16.cpp
+d:\桌面\练习git\Practice\11指针1.cpp(7,12): warning C4244:  “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+d:\桌面\练习git\Practice\p16.cpp(30,12): warning C4244:  “=”: 从“double”转换到“int”，可能丢失数据
+  Vc大作业.cpp
+d:\桌面\练习git\Practice\p16.cpp(37,12): warning C4244:  “=”: 从“double”转换到“int”，可能丢失数据
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,24): warning C4838:  从“double”转换到“int”需要收缩转换
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,24): warning C4244:  “初始化”: 从“double”转换到“int”，可能丢失数据
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,32): warning C4838:  从“double”转换到“int”需要收缩转换
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,32): warning C4244:  “初始化”: 从“double”转换到“int”，可能丢失数据
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,40): warning C4838:  从“double”转换到“int”需要收缩转换
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,40): warning C4244:  “初始化”: 从“double”转换到“int”，可能丢失数据
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,48): warning C4838:  从“double”转换到“int”需要收缩转换
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,48): warning C4244:  “初始化”: 从“double”转换到“int”，可能丢失数据
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,56): warning C4838:  从“double”转换到“int”需要收缩转换
+  while2.cpp
+d:\桌面\练习git\Practice\Vc大作业.cpp(70,56): warning C4244:  “初始化”: 从“double”转换到“int”，可能丢失数据
+  while语句.cpp
+  估计sin值 例题.cpp
+  估计sin值.cpp
+d:\桌面\练习git\Practice\while2.cpp(18,9): warning C4244:  “=”: 从“double”转换到“int”，可能丢失数据
+  四则运算计算器.cpp
+  按升序输出输入的几个值13.cpp
+  结构程序练习.cpp
+  ，，，语句14.cpp
+d:\桌面\练习git\Practice\估计sin值.cpp(24,11): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+  ？：语句.cpp
+  switch语句2.cpp
+  基础语句.cpp
+d:\桌面\练习git\Practice\，，，语句14.cpp(6,6): warning C4101:  “y”: 未引用的局部变量
+  StdAfx.cpp
+  switch语句1.cpp
+  正在生成代码...
+d:\桌面\练习git\Practice\基础语句.cpp(8,10): warning C4244:  “=”: 从“double”转换到“float”，可能丢失数据
+d:\桌面\练习git\Practice\基础语句.cpp(8,10): warning C4244: d:\桌面\练习git\Practice\p16.cpp(16) : warning C4715: “unique”: 不是所有的控件路径都返回值
+Vc大作业.obj : error LNK2019: 无法解析的外部符号 "void __cdecl cal(void)" (?cal@@YAXXZ)，该符号在函数 _main 中被引用
+    已定义且可能匹配的符号上的提示:
+      "void __cdecl cal(struct student *)" (?cal@@YAXPAUstudent@@@Z)
+MSVCRTD.lib(exe_winmain.obj) : error LNK2019: 无法解析的外部符号 _WinMain@16，该符号在函数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 中被引用
+d:\桌面\练习git\Practice\Debug\练习.exe : fatal error LNK1120: 2 个无法解析的外部命令
