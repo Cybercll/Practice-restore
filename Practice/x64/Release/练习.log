@@ -1,7 +1,33 @@
-﻿  Vc大作业.cpp
-d:\桌面\练习git\Practice\Vc大作业.cpp(42,24): warning C4838:  从“double”转换到“int”需要收缩转换
-d:\桌面\练习git\Practice\Vc大作业.cpp(42,32): warning C4838:  从“double”转换到“int”需要收缩转换
-d:\桌面\练习git\Practice\Vc大作业.cpp(42,40): warning C4838:  从“double”转换到“int”需要收缩转换
-d:\桌面\练习git\Practice\Vc大作业.cpp(42,48): warning C4838:  从“double”转换到“int”需要收缩转换
-d:\桌面\练习git\Practice\Vc大作业.cpp(42,56): warning C4838:  从“double”转换到“int”需要收缩转换
+﻿  11指针1.cpp
+  cin.getline15.cpp
+  p16.cpp
+  Vc大作业.cpp
+d:\桌面\练习git\Practice\Vc大作业.cpp(32,24): warning C4838:  从“double”转换到“int”需要收缩转换
+d:\桌面\练习git\Practice\Vc大作业.cpp(32,32): warning C4838:  从“double”转换到“int”需要收缩转换
+d:\桌面\练习git\Practice\Vc大作业.cpp(32,40): warning C4838:  从“double”转换到“int”需要收缩转换
+d:\桌面\练习git\Practice\Vc大作业.cpp(32,48): warning C4838:  从“double”转换到“int”需要收缩转换
+  while2.cpp
+  while语句.cpp
+  估计sin值 例题.cpp
+  估计sin值.cpp
+  四则运算计算器.cpp
+  按升序输出输入的几个值13.cpp
+  结构程序练习.cpp
+  ，，，语句14.cpp
+  ？：语句.cpp
+  switch语句2.cpp
+  基础语句.cpp
+  StdAfx.cpp
+  switch语句1.cpp
+  正在编译...
+  正在生成代码...
+d:\桌面\练习git\Practice\Vc大作业.cpp(32,56): warning C4838:  从“double”转换到“int”需要收缩转换
+d:\桌面\练习git\Practice\Vc大作业.cpp(32,56): warning C4838: d:\桌面\练习git\Practice\p16.cpp(16) : warning C4715: “unique”: 不是所有的控件路径都返回值
   练习.vcxproj -> d:\桌面\练习git\Practice\x64\Release\练习.exe
+d:\桌面\练习git\Practice\估计sin值 例题.cpp(14): warning C26451: Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).
+d:\桌面\练习git\Practice\估计sin值 例题.cpp(14): warning C26451: Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).
+d:\桌面\练习git\Practice\估计sin值.cpp(17): warning C26451: Arithmetic overflow: Using operator '-' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '-' to avoid overflow (io.2).
+d:\桌面\练习git\Practice\估计sin值.cpp(17): warning C26451: Arithmetic overflow: Using operator '*' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '*' to avoid overflow (io.2).
+d:\桌面\练习git\Practice\按升序输出输入的几个值13.cpp(16): warning C6001: 使用未初始化的内存“a”。
+d:\桌面\练习git\Practice\基础语句.cpp(8): warning C26451: Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).
+d:\桌面\练习git\Practice\基础语句.cpp(8): warning C26451: Arithmetic overflow: Using operator '+' on a 4 byte value and then casting the result to a 8 byte value. Cast the value to the wider type before calling operator '+' to avoid overflow (io.2).
