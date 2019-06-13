@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdafx.h>
 using namespace std;
 class student
 {
@@ -14,23 +15,24 @@ private:
 
 };
 
-student
-stu1 = { 1601,"LiLi",51,62,80 },
-stu2 = { 1602,"WangTao",84,88,90 },
-stu3 = { 1603,"ZhaoYi",95,90,95 },
-stu4 = { 1604,"LiuFang",62,73,80 },
-stu5 = { 1605,"ShenBin",73,66,90 };
-void cal();
-void showmenu();
-void sort(student* p);
-void aver(int *p);
-void printall(student *p);
-void main()//main º¯Êı
+
+void cal(student  (&p)[5]);//è®¡ç®—å‡½æ•°
+void showmenu();//èœå•æ˜¾ç¤º
+void sort(student  (&p)[5]);//æ’åº
+void aver(student  (&p)[5]);//å¹³å‡åˆ†
+void printall(student (&p)[5]);//è¾“å‡ºå­¦ç”Ÿä¿¡æ¯
+void search(int a,student(&p)[5]);//æœç´¢
+void max(student(&p)[5]);//è¾“å‡ºæœ€å¤§å­¦ç”Ÿä¿¡æ¯
+int main()//main å‡½æ•°
 {
-	cal();
+	student
+		stu1 = {1601,"LiLi",51,62,80},
+		stu2 = {1602,"WangTao",84,88,90},
+		stu3 = {1603,"ZhaoYi",95,90,95},
+		stu4 = {1604,"LiuFang",62,73,80},
+		stu5 = {1605,"ShenBin",73,66,90};
 	student stusort[5] = { stu1,stu2,stu3,stu4,stu5 };
-	int scores[5] = { stu1.sc,stu2.sc,stu3.sc,stu4.sc,stu5.sc };
-	
+	cal(stusort);
 	bool stop=1;
 	while (stop) {
 		int choice;
@@ -39,73 +41,70 @@ void main()//main º¯Êı
 		switch (choice)
 		{
 		default:
-		{
-			cout << "ÊäÈë´íÎó£¬ÇëÖØĞÂÊäÈë" << endl;
-			showmenu();
-		}
+			{
+				cout << "è¾“å…¥é”™è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥" << endl;
+				showmenu();
+			}
 		case 1: {printall(stusort); continue; }
-		case 2: {aver(scores); continue; }
-		case 3: {}
+		case 2: {aver(stusort); continue; }
+		case 3: {int searchid;cin>>searchid;search(searchid,stusort);continue;}
 		case 4: {}
 		case 5: {sort(stusort);printall(stusort); continue; }
 		case 6: stop = 0; break;
 		}
-		
-	}
-}
-void cal()
-{
-	stu1.sc = 0.6 * stu1.sc1 + 0.3 * stu1.sc2 + 0.1 * stu1.sc3;
-	stu2.sc = 0.6 * stu2.sc1 + 0.3 * stu2.sc2 + 0.1 * stu2.sc3;
-	stu3.sc = 0.6 * stu3.sc1 + 0.3 * stu3.sc2 + 0.1 * stu3.sc3;
-	stu4.sc = 0.6 * stu4.sc1 + 0.3 * stu4.sc2 + 0.1 * stu4.sc3;
-	stu5.sc = 0.6 * stu5.sc1 + 0.3 * stu5.sc2 + 0.1 * stu5.sc3;
-}
 
-void printall(student *stusort)
+	}return 0;
+}
+void cal(student (&p)[5])
+{
+	p[0].sc = 0.6 * p[0].sc1 + 0.3 * p[0].sc2 + 0.1 * p[0].sc3;
+	p[1].sc = 0.6 * p[1].sc1 + 0.3 * p[1].sc2 + 0.1 * p[1].sc3;
+	p[2].sc = 0.6 * p[2].sc1 + 0.3 * p[2].sc2 + 0.1 * p[2].sc3;
+	p[3].sc = 0.6 * p[3].sc1 + 0.3 * p[3].sc2 + 0.1 * p[3].sc3;
+	p[4].sc = 0.6 * p[4].sc1 + 0.3 * p[4].sc2 + 0.1 * p[4].sc3;
+}
+void printall(student (&p)[5])
 {
 
 	for (int i = 0; i < 5; i++)
 	{
-		cout << "Ñ§ºÅ" << '\t' << "ĞÕÃû" << '\t' << "ÆÚÄ©³É¼¨" << '\t' << "ÆÚÖĞ³É¼¨" << '\t' << "Æ½Ê±³É¼¨" << '\t' << "×îÖÕ³É¼¨" << endl;
-		cout << stusort[i].no << '\t' << stusort[i].xm << '\t' << stusort[i].sc1 << '\t' << '\t' << stusort[i].sc2 << '\t' << '\t' << stusort[i].sc3 << '\t' << '\t' << stusort[i].sc << endl;
-
+		cout << "å­¦å·" << '\t' << "å§“å" << '\t' << "æœŸæœ«æˆç»©" << '\t' << "æœŸä¸­æˆç»©" << '\t' << "å¹³æ—¶æˆç»©" << '\t' << "æœ€ç»ˆæˆç»©" << endl;
+		cout << p[i].no << '\t' << p[i].xm << '\t' << p[i].sc1 << '\t' << '\t' << p[i].sc2 << '\t' << '\t' << p[i].sc3 << '\t' << '\t' << p[i].sc << endl;
 	}
 };
-void aver(int *p)
+void aver(student (&p)[5])
 {
-	float a = 0;
+	double a = 0;
 	for (int i = 0; i < 5; i++) 
 	{
-		a += p[i];
+		a += p[i].sc;
 	}
-	cout << "Æ½¾ù·ÖÊıÊÇ" << endl << a / 5 << endl;
+	cout << "å¹³å‡åˆ†æ•°æ˜¯" << endl << a / 5 << endl;
 }
 
-void sort(student * a)
+void sort(student(&t)[5])
 {
-	student* temp ;
+	student temp ;
 	for (int i = 0; i < 5; i++)//
 	{
 		for (int p = i+1; p < 5; p++)
 		{
-			if (a[i].sc < a[p].sc)
+			if (t[i].sc < t[p].sc)
 			{
-				student* p1;
-				student* p2;
-				p1 = &a[i];
-				p2 = &a[p];
-				temp = p1;
-				p1 = p2;
-				p2 = temp;
+				temp = t[i];
+				t[i] = t[p];
+				t[p] = temp;
 			}
 		}
 	}
 }
 
-void showmenu()//showmenuº¯Êı0
+void showmenu()//showmenuå‡½æ•°0
 {
-	cout << "**************************" << endl << "ÇëÊäÈë1~6ÄÚÊı×Ö" << endl << "1. Êä³öÑ§ÉúĞÅÏ¢" << endl << "2. ¼ÆËã×ÜÆ½¾ù³É¼¨" << endl << "3. ²éÑ¯Ö¸¶¨Ñ§ºÅÑ§ÉúĞÅÏ¢" << endl << "4. ¿¼µÃ×îºÃµÄÑ§ÉúĞÅÏ¢" << endl << "5. °´Ñ§ÉúµÄ×îÖÕ³É¼¨½µĞòÅÅĞò" << endl << "6. ½áÊø" << endl << "**************************" << endl;
-	cout << "ÇëÊäÈëÑ¡Ïî" << endl;
+	cout << "**************************" << endl << "è¯·è¾“å…¥1~6å†…æ•°å­—" << endl << "1. è¾“å‡ºå­¦ç”Ÿä¿¡æ¯" << endl << "2. è®¡ç®—æ€»å¹³å‡æˆç»©" << endl << "3. æŸ¥è¯¢æŒ‡å®šå­¦å·å­¦ç”Ÿä¿¡æ¯" << endl << "4. è€ƒå¾—æœ€å¥½çš„å­¦ç”Ÿä¿¡æ¯" << endl << "5. æŒ‰å­¦ç”Ÿçš„æœ€ç»ˆæˆç»©é™åºæ’åº" << endl << "6. ç»“æŸ" << endl << "**************************" << endl;
+	cout << "è¯·è¾“å…¥é€‰é¡¹" << endl;
 }
+void search(int a,student (&p)[5])
+{
 
+}
