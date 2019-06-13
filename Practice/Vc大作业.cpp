@@ -21,7 +21,8 @@ void showmenu();//菜单显示
 void sort(student  (&p)[5]);//排序
 void aver(student  (&p)[5]);//平均分
 void printall(student (&p)[5]);//输出学生信息
-void search(int a,student(&p)[5]);//搜索
+void printone(student (&p)[5]);//输出学生信息
+int search(int a,student(&p)[5]);//搜索
 void max(student(&p)[5]);//输出最大学生信息
 int main()//main 函数
 {
@@ -47,7 +48,7 @@ int main()//main 函数
 			}
 		case 1: {printall(stusort); continue; }
 		case 2: {aver(stusort); continue; }
-		case 3: {int searchid;cin>>searchid;search(searchid,stusort);continue;}
+		case 3: {int searchid;cin>>searchid;//search(searchid,stusort);continue;}
 		case 4: {}
 		case 5: {sort(stusort);printall(stusort); continue; }
 		case 6: stop = 0; break;
@@ -104,7 +105,8 @@ void showmenu()//showmenu函数0
 	cout << "**************************" << endl << "请输入1~6内数字" << endl << "1. 输出学生信息" << endl << "2. 计算总平均成绩" << endl << "3. 查询指定学号学生信息" << endl << "4. 考得最好的学生信息" << endl << "5. 按学生的最终成绩降序排序" << endl << "6. 结束" << endl << "**************************" << endl;
 	cout << "请输入选项" << endl;
 }
-void search(int a,student (&p)[5])
+int search(int a,student (&p)[5])
 {
-
+for (int i=0;i<5||a==p[i];i++);
+return i;
 }
