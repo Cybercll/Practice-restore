@@ -66,9 +66,10 @@ int main()//main 函数
 		{
 			cin >> searchid;
 			del(stusort,searchid,stunum);
+			stunum--;
 			continue;
 		}
-		case 0: system("cls");
+		case 0: system("cls"); 
 		}
 	}return 0;
 }
@@ -145,7 +146,7 @@ int search(int a, student(&p)[100],int v)
 }
 void max(student(&p)[100],int num)
 {
-	int maxscore = p[1].sc;
+	int maxscore = p[0].sc;
 	int max_ = 0;
 	for (int i = 1; i < num; i++)
 	{
@@ -169,7 +170,7 @@ void head()
 {
 	cout << "学号" << '\t' << "姓名" << '\t' << "期末成绩" << '\t' << "期中成绩" << '\t' << "平时成绩" << '\t' << "最终成绩" << endl;
 }
-void del(student(&p)[100],int no,int num)
+void del(student(&p)[100],int n,int num)
 {
 	/*
 	首先查找函数找到角标
@@ -177,18 +178,14 @@ void del(student(&p)[100],int no,int num)
 	*/
 	int i = 0;
 	int p_=0;
-	while (i < num && no != p[i].no)
+	for (;!( i < num && n == p[i].no); i++);
+	if (n == p[i].no)
 	{
-		i++;
-	}
-	if (no == p[i].no)
-	{
-		int p_= i;
+		p_= i;
 	}
 	p[p_] = {};
 	for (int h = p_; h < 99; h++) 
 	{
-		p[h + 1] = p[h];
+		p[h]=p[h + 1];
 	}
-
 }

@@ -1,4 +1,4 @@
 ﻿  VC大作业新生成.cpp
-d:\桌面\练习git\VC大作业\VC大作业\VC大作业\VC大作业新生成.cpp(148,15): warning C4244:  “初始化”: 从“double”转换到“int”，可能丢失数据
-d:\桌面\练习git\VC大作业\VC大作业\VC大作业\VC大作业新生成.cpp(155,19): warning C4244:  “=”: 从“double”转换到“int”，可能丢失数据
+d:\桌面\练习git\VC大作业\VC大作业\VC大作业\VC大作业新生成.cpp(149,15): warning C4244:  “初始化”: 从“double”转换到“int”，可能丢失数据
+d:\桌面\练习git\VC大作业\VC大作业\VC大作业\VC大作业新生成.cpp(156,19): warning C4244:  “=”: 从“double”转换到“int”，可能丢失数据
   VC大作业.vcxproj -> d:\桌面\练习git\VC大作业\VC大作业\x64\Debug\VC大作业.exe
