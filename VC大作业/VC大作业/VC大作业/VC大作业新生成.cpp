@@ -10,69 +10,67 @@ public:
 	double sc3;
 	double sc;
 };
-void cal(student(&p)[100],int num);//计算函数
+void cal(student(&p)[100], int num);//计算函数
 void showmenu();//菜单显示
-void sort(student(&p)[100],int num);//排序
-void aver(student(&p)[100],int num);//平均分计算函数
-void printall(student(&p)[100],int i);//输出所有学生信息
-int search(int a,student(&p)[100],int num);//输出学号为a的学生信息
-void max(student(&p)[100],int);//输出最大学生信息
-void input(student(&p)[100],int q);//输入一行学生信息
+void sort(student(&p)[100], int num);//排序
+void aver(student(&p)[100], int num);//平均分计算函数
+void printall(student(&p)[100], int num);//输出所有学生信息
+int search(int a, student(&p)[100], int num);//输出学号为a的学生信息
+void max(student(&p)[100], int);//输出最大学生信息
+void input(student(&p)[100], int& num);//输入一行学生信息
 void head();//用于快速输出表头
-void del(student(&p)[100], int n, int &num);//删除函数
+void del(student(&p)[100], int n, int& num);//删除函数
 int main()//main 函数
 {
-	int stunum=5;//定义学生初始数量
-	student//初始化五个学生
+	int stunum = 5;//定义学生初始数量
+	student//初始化五个学生信息
 		stu1 = { 1601,"LiLi",51,62,80 },
 		stu2 = { 1602,"WangTao",84,88,90 },
 		stu3 = { 1603,"ZhaoYi",95,90,95 },
 		stu4 = { 1604,"LiuFang",62,73,80 },
 		stu5 = { 1605,"ShenBin",73,66,90 };
 	student stusort[100] = { stu1,stu2,stu3,stu4,stu5 };//放入一个100 个元素的结构体数组中使其可以进行增删
-	cal(stusort,stunum);//调用计算函数计算最终值
-	bool stop = 1;//创建stop一个布尔型开关变量
-	int searchid;//搜索的学号 //这一项需要复用因此放到外层
+	cal(stusort, stunum);//调用计算函数计算最终值
+	bool stop = 1;//创建stop--一个布尔型开关变量
+	int searchid;//初始化搜索的学号 //这一项需要复用因此放到外层
 	while (stop) {
-		int choice;//选项变量
+		char choice;//选项变量 定义为char变量防止输入字符导致程序异常
+		system("cls");
 		showmenu();//显示菜单
 		cin >> choice;//输入选项
 		switch (choice)//选项各自操作
 		{
 		default:
 		{
+			system("cls");//每次结束后自动清除屏幕内容
 			cout << "输入错误，请重新输入" << endl;
 			continue;
 		}//错误输入
-		case 1: {printall(stusort,stunum); continue; }
-		case 2: {aver(stusort,stunum); continue; }
-		case 3: {cout<<"请输入内容"; cin >> searchid; search(searchid, stusort, stunum); continue; }
-		case 4: {max(stusort,stunum); continue; }//考的最好的
-		case 5: {sort(stusort,stunum); printall(stusort,stunum); continue; }
-		case 6: stop = 0; break;//当为6的时候把开关拨到0
-		case 7:{
+		case '1': {printall(stusort, stunum); system("pause"); continue;  }//在continue之前进行一次暂停 给用户一个缓冲时间
+		case '2': {aver(stusort, stunum); system("pause"); continue; }
+		case '3': {cout << "请输入要查询的学号"; cin >> searchid; search(searchid, stusort, stunum); system("pause"); continue; }
+		case '4': {max(stusort, stunum); system("pause"); continue; }
+		case '5': {sort(stusort, stunum); printall(stusort, stunum); system("pause"); continue; }
+		case '6': stop = 0; break;//当为6的时候把开关拨到0
+		case '7': {
 			cout << "请输入内容" << endl;
 			head();
 			input(stusort, stunum);
-			stunum++; 
 			cal(stusort, stunum);
-			sort(stusort, stunum);
-			printall(stusort, stunum);
+			printall(stusort, stunum); system("pause");
 			continue;
-			}
-		case 8: 
+		}
+		case '8':
 		{
 			cout << "输入要删除信息学号" << endl;
 			cin >> searchid;
-			del(stusort,searchid,stunum);
-			stunum--;
+			del(stusort, searchid, stunum); system("pause");
 			continue;
 		}
-		case 0: system("cls"); //清屏函数
 		}
 	}return 0;
 }
-void cal(student(&p)[100],int num)
+void cal(student(&p)[100], int num)
 {
 	for (int n = 0; n < num; n++)
 	{
@@ -81,13 +79,13 @@ void cal(student(&p)[100],int num)
 }
 void showmenu()//showmenu函数
 {
-	cout << "**************************" << endl << "请输入1~6内数字" << endl << "1. 输出学生信息" << endl << "2. 计算总平均成绩" << endl << "3. 查询指定学号学生信息" << endl << "4. 考得最好的学生信息" << endl << "5. 按学生的最终成绩降序排序" << endl << "6. 结束" <<endl<<"7. 输入新数据"<<endl<<"8. 删除指定学号信息"<< endl <<"0. 清屏"<<endl<< "**************************" << endl;
+	cout << "**************************" << endl << "请输入1~6内数字" << endl << "1. 输出学生信息" << endl << "2. 计算总平均成绩" << endl << "3. 查询指定学号学生信息" << endl << "4. 考得最好的学生信息" << endl << "5. 按学生的最终成绩降序排序" << endl << "6. 结束" << endl << "7. 输入新数据" << endl << "8. 删除指定学号信息" << endl << "**************************" << endl; //菜单
 	cout << "请输入选项" << endl;
 }
-void sort(student(&t)[100],int num)
+void sort(student(&t)[100], int num)
 {
 	student temp;
-	for (int i = 0; i < num; i++)//双层冒泡
+	for (int i = 0; i < num; i++)//双层冒泡进行
 	{
 		for (int p = i + 1; p < num; p++)
 		{
@@ -100,31 +98,31 @@ void sort(student(&t)[100],int num)
 		}
 	}
 }
-void aver(student(&p)[100],int num)
+void aver(student(&p)[100], int num)
 {
 	double a = 0;
 	for (int i = 0; i < num; i++)
 	{
 		a += p[i].sc;
 	}
-	cout << "平均分数是" << endl << a / num<< endl;
+	cout << "平均分数是" << endl << a / num << endl;
 }
-void printall(student(&p)[100],int num)
+void printall(student(&p)[100], int num)
 {
+	head();
 	for (int i = 0; i < num; i++)
 	{
-		head();
 		cout << p[i].no << '\t' << p[i].xm << '\t' << p[i].sc1 << '\t' << '\t' << p[i].sc2 << '\t' << '\t' << p[i].sc3 << '\t' << '\t' << p[i].sc << endl;
 	}
 };
-int search(int a, student(&p)[100],int num)
+int search(int a, student(&p)[100], int num)
 {
 	int i = 0;
 	while (i < num && a != p[i].no)
 	{
 		i++;
 	}
-	if (a== p[i].no)//防止遍历stusort也没有找到符合学号的记录从而输出最后一位
+	if (a == p[i].no)//防止遍历stusort也没有找到符合学号的记录从而输出最后一位
 	{
 		head();
 		cout << p[i].no << '\t' << p[i].xm << '\t' << p[i].sc1 << '\t' << '\t' << p[i].sc2 << '\t' << '\t' << p[i].sc3 << '\t' << '\t' << p[i].sc << endl;
@@ -132,11 +130,11 @@ int search(int a, student(&p)[100],int num)
 	}
 	else
 	{
-		cout << "输入错误" << endl;
+		cout << "未找到相同学号的记录" << endl;
 		return -1;
 	}
 }
-void max(student(&p)[100],int num)
+void max(student(&p)[100], int num)
 {
 	int maxscore = p[0].sc;
 	int max_ = 0;
@@ -151,30 +149,41 @@ void max(student(&p)[100],int num)
 	head();
 	cout << p[max_].no << '\t' << p[max_].xm << '\t' << p[max_].sc1 << '\t' << '\t' << p[max_].sc2 << '\t' << '\t' << p[max_].sc3 << '\t' << '\t' << p[max_].sc << endl;
 }
-void input(student(&p)[100], int q)
+void input(student(&p)[100], int& num)
 {
-	cin >> p[q].no >> p[q].xm>> p[q].sc1 >> p[q].sc2 >> p[q].sc3;
+	student temp = {};
+	cin >> temp.no >> temp.xm >> temp.sc1 >> temp.sc2 >> temp.sc3;
+	if (search(temp.no, p, num) == -1)
+	{
+		p[num] = temp;
+		num++;
+		sort(p, num);
+		cout << "添加完毕" << endl;
+	}
+	else cout << "找到如上学号重复记录，请重试！" << endl;
 }
 void head()
 {
 	cout << "学号" << '\t' << "姓名" << '\t' << "期末成绩" << '\t' << "期中成绩" << '\t' << "平时成绩" << '\t' << "最终成绩" << endl;
 }
-void del(student(&p)[100],int n,int &num)
+void del(student(&p)[100], int n, int& num)
 {
 	int i = 0;
-	int p_=0; //首先查找函数找到角标//其次把删去这一点后面的数组向前挪一个
-	for (;i < num && n != p[i].no; i++);//遍历p[i].no找出相等的i
-	if(p[p_].no == n)//检测是否相等 相等即开始进行 否则报错
-	{	p_= i;
-		for (int h = p_; h < 99; h++) 
+	int p_ = 0; //首先查找函数找到角标//其次把删去这一点后面的数组向前挪一个
+	for (; i < num && n != p[i].no; i++);//遍历p[i].no找出相等的i
+	if (p[i].no == n)//检测是否相等 相等即开始进行 否则报错
+	{
+		p_ = i;
+		for (int h = p_; h < 99; h++)
 		{
-		p[h]=p[h + 1];//所有数据向前一位
+			p[h] = p[h + 1];//所有数据向前一位覆盖即删除
 		}
 		num--;
+		cout << "成功删除" << endl;
 	}
 	else
 	{
 		cout << "无此记录,删除失败" << endl;
 	}
-	
+
 }
